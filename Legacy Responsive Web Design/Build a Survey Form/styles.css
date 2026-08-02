@@ -1,0 +1,7 @@
+label{
+  display: block;
+  margin: 0.5rem 0;
+}
+#number-label {
+  min-width: 150px;
+}
