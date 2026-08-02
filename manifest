@@ -1,0 +1,40 @@
+const normalizeUnits = (manifest) => {
+  const newObj = {
+    ...manifest
+  };
+  if (newObj.unit === "kg") {
+    return newObj
+  } else {
+    newObj.weight *= 0.45;
+    newObj.unit = "kg";
+    return newObj
+  }
+};
+
+const validateManifest = (manifest) => {
+  const newObj = {};
+  if (!manifest.hasOwnProperty("containerId")) {
+    newObj.containerId = "Missing"
+  } else if (!(Number.isInteger(manifest.containerId)) || !(manifest.containerId > 0)) {
+    newObj.containerId = "Invalid"};
+  if (!manifest.hasOwnProperty("destination")) {
+    newObj.destination = "Missing"
+  } else if (!manifest.destination !== "string" || manifest.destination.trim() === "") {newObj.destination = "Invalid"};
+  if (!manifest.hasOwnProperty("weight")) {
+    newObj.weight = "Missing"
+  } else if (typeof manifest.weight !== "number" || manifest.weight < 0) {
+    newObj.weight = "Invalid"};
+  if (!manifest.hasOwnProperty("unit")) {
+    newObj.unit = "Missing"
+  } else if (manifest.unit != "kg" && manifest.unit != "lb") {
+    newObj.unit = "Invalid"};
+  if (!manifest.hasOwnProperty("hazmat")) {
+    newObj.hazmat = "Missing"
+  } else if (typeof manifest.hazmat !== "boolean") {
+    newObj.hazmat = "Invalid"};
+  return newObj;
+};
+
+const processManifest = (manifest) => {
+
+};
