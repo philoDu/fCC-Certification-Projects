@@ -38,3 +38,6 @@ const validateManifest = (manifest) => {
 const processManifest = (manifest) => {
 
 };
+
+
+
