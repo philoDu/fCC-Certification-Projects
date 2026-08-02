@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Survey Project</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Survey Project</h1>
+    <p id="description">This is a survey project for freeCodeCamp</p>
+    <form id="survey-form">
+      <label for="name" id="name-label">Please, enter your name: </label>
+      <input id="name" name="name" type="text" placeholder="Enter your name" required />
+      <label for="email" id="email-label">Please, enter your e-mail: </label>
+      <input id="email" name="email" type="email" placeholder="Enter your e-mail" required />
+      <label for="number" id="number-label">Please, enter a number: </label>
+      <input id="number" name="number" placeholder="Enter a number" type="number" min="5" max="10" />
+      <label for="dropdown">Please, select: <select id="dropdown" name="dropdown">
+        <option>Select one</option>
+        <option>Option one</option>
+        <option>Option two</option>
+          </select></label>
+      <legend>Select an option:</legend>
+      <label for="option1">Option 1 <input id="option1" name="option-radio" type="radio" value="option1" checked /></label>
+      <label for="option2">Option 2 <input id="option2" name="option-radio" type="radio" value="option2" /></label>
+      <legend>Select as many as you like:</legend><br>
+      <input id="option" type="checkbox" class="checkbox" value="this" /> This one
+      <input id="option" type="checkbox" class="checkbox" value="that" /> That one <br>
+      <input id="option" type="checkbox" class="checkbox" value="this-other" /> This other one
+      <input id="option" type="checkbox" class="checkbox" value="that-other" /> That other one <br><br>
+      <legend>Text area to write additional comments:</legend><br>
+      <textarea></textarea><br><br>
+      <input id="submit" type="submit" value="Submit"></input>
+
+    </form>
+  </body>
+</html>
